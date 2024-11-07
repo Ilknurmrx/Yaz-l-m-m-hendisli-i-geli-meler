@@ -12,6 +12,7 @@ namespace OrnekApi.Controllers
         {
             int sonuc = sayi + 2;
             return Ok(new { sonuc });
+            //deneme
         }
     }
 }
