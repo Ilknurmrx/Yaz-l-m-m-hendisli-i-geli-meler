@@ -1,1 +1,0 @@
-# Yaz-l-m-m-hendisli-i-geli-meler
