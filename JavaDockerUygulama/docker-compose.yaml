@@ -1,0 +1,12 @@
+version: '3.9'
+services:
+  java-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    stdin_open: true # Kullanıcı girişini aktif et
+    tty: true # Terminal oturumunu etkinleştir
+    ports:
+      - "8080:8080" # Host:Container port mapping
+    volumes:
+      - ./src:/usr/src/app/src # Kaynak kod klasörünü volume olarak bağla
