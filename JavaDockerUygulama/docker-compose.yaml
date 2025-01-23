@@ -9,4 +9,4 @@ services:
     ports:
       - "8080:8080" # Host:Container port mapping
     volumes:
-      - ./src:/usr/src/app/src # Kaynak kod klasörünü volume olarak bağla
+      - .:/usr/src/app # Tüm GitHub repo klasörünü container'a bağla

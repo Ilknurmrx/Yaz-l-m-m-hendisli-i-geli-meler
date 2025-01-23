@@ -18,7 +18,20 @@ public class JavaDockerUygulama {
             public void handle(HttpExchange exchange) throws IOException {
                 String response = "<h1>Merhaba Dünya!</h1>";
                 
+                // CORS ayarlarını ekle
+                exchange.getResponseHeaders().add("Access-Control-Allow-Origin", "*");
+                exchange.getResponseHeaders().add("Access-Control-Allow-Methods", "GET,POST,PUT,DELETE,OPTIONS");
+                exchange.getResponseHeaders().add("Access-Control-Allow-Headers", "Content-Type,Authorization");
+                
+                // Content-Type ayarı
                 exchange.getResponseHeaders().set("Content-Type", "text/html; charset=UTF-8");
+                
+                // OPTIONS isteği için özel yanıt
+                if (exchange.getRequestMethod().equalsIgnoreCase("OPTIONS")) {
+                    exchange.sendResponseHeaders(204, -1);
+                    return;
+                }
+                
                 exchange.sendResponseHeaders(200, response.getBytes("UTF-8").length);
                 
                 try (OutputStream os = exchange.getResponseBody()) {
