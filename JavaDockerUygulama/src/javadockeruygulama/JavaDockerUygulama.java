@@ -16,7 +16,7 @@ public class JavaDockerUygulama {
         server.createContext("/", new HttpHandler() {
             @Override
             public void handle(HttpExchange exchange) throws IOException {
-                String response = "<h1>Merhaba Dünya!</h1>";
+                String response = "<h1>Merhaba Dünya2!</h1>";
                 
                 // CORS ayarlarını ekle
                 exchange.getResponseHeaders().add("Access-Control-Allow-Origin", "*");
