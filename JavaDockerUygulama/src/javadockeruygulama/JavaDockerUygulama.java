@@ -16,7 +16,7 @@ public class JavaDockerUygulama {
         server.createContext("/", new HttpHandler() {
             @Override
             public void handle(HttpExchange exchange) throws IOException {
-                String response = "<h1>Merhaba Dünya!</h1>";
+                String response = "<h1>Merhaba Dünya2!</h1>";
                 
                 exchange.getResponseHeaders().set("Content-Type", "text/html; charset=UTF-8");
                 exchange.sendResponseHeaders(200, response.getBytes("UTF-8").length);
