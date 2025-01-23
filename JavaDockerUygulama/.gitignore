@@ -1,0 +1,17 @@
+# Build çıktıları
+build/
+classes/
+
+# NetBeans özel dosyaları
+nbproject/
+manifest.mf
+build.xml
+
+# IDE dosyaları
+.idea/
+*.iml
+.vscode/
+
+# Sistem dosyaları
+.DS_Store
+Thumbs.db 
